@@ -4,26 +4,15 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/
 
 import { render, renderHook, waitFor } from "@testing-library/react";
-import { useEffect, useState } from "react";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import { useEffect } from "react";
 
 import { PanelSettings } from "@foxglove/studio";
 import { useConfigById } from "@foxglove/studio-base/PanelAPI";
-import { MessagePipelineProvider } from "@foxglove/studio-base/components/MessagePipeline";
-import MockPanelContextProvider from "@foxglove/studio-base/components/MockPanelContextProvider";
 import Panel from "@foxglove/studio-base/components/Panel";
-import AppConfigurationContext from "@foxglove/studio-base/context/AppConfigurationContext";
-import {
-  getExtensionPanelSettings,
-  useExtensionCatalog,
-} from "@foxglove/studio-base/context/ExtensionCatalogContext";
-import { PanelStateContextProvider } from "@foxglove/studio-base/providers/PanelStateContextProvider";
-import WorkspaceContextProvider from "@foxglove/studio-base/providers/WorkspaceContextProvider";
+import { useExtensionCatalog } from "@foxglove/studio-base/context/ExtensionCatalogContext";
 import { ExtensionLoader } from "@foxglove/studio-base/services/ExtensionLoader";
 import PanelSetup from "@foxglove/studio-base/stories/PanelSetup";
 import { ExtensionInfo } from "@foxglove/studio-base/types/Extensions";
-import { makeMockAppConfiguration } from "@foxglove/studio-base/util/makeMockAppConfiguration";
 
 import ExtensionCatalogProvider from "./ExtensionCatalogProvider";
 

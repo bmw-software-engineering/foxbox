@@ -2,7 +2,6 @@
 // License, v2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/
 
-import { waitFor } from "@testing-library/react";
 import { produce } from "immer";
 
 import { PanelSettings } from "@foxglove/studio";
@@ -1071,7 +1070,7 @@ describe("renderState", () => {
     const generatePanelSettings = <T>(obj: PanelSettings<T>) => obj as PanelSettings<unknown>;
     const checkRenderedConfig = jest.fn();
     const buildRenderState = initRenderStateBuilder();
-    const state = buildRenderState({
+    buildRenderState({
       appSettings: undefined,
       playerState: undefined,
       currentFrame: [
