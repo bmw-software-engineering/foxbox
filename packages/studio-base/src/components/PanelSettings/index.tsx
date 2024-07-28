@@ -12,10 +12,8 @@ import { SettingsTree } from "@foxglove/studio";
 import { AppSetting } from "@foxglove/studio-base/AppSetting";
 import { useConfigById } from "@foxglove/studio-base/PanelAPI";
 import EmptyState from "@foxglove/studio-base/components/EmptyState";
-import {
-  getTopicToSchemaNameMap,
-  useMessagePipeline,
-} from "@foxglove/studio-base/components/MessagePipeline";
+import { useMessagePipeline } from "@foxglove/studio-base/components/MessagePipeline";
+import { getTopicToSchemaNameMap } from "@foxglove/studio-base/components/MessagePipeline/selectors";
 import { ActionMenu } from "@foxglove/studio-base/components/PanelSettings/ActionMenu";
 import SettingsTreeEditor from "@foxglove/studio-base/components/SettingsTreeEditor";
 import { ShareJsonModal } from "@foxglove/studio-base/components/ShareJsonModal";
